@@ -1,0 +1,292 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>GOLZIO — Volvemos pronto</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
+
+<style>
+
+:root{
+    --bg:#050505;
+    --text:#ffffff;
+    --muted:#9c9c9c;
+    --accent:#D6FF1F;
+}
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    background:var(--bg);
+    color:var(--text);
+    font-family:'Inter',sans-serif;
+}
+
+.hero{
+    position:relative;
+    width:100%;
+    height:100vh;
+    overflow:hidden;
+}
+
+.hero video{
+    position:absolute;
+    inset:0;
+
+    width:100%;
+    height:100%;
+
+    object-fit:cover;
+
+    filter:
+        grayscale(1)
+        contrast(1.15)
+        brightness(.45);
+
+    animation:slowZoom 24s ease-in-out infinite alternate;
+}
+
+@keyframes slowZoom{
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.08);
+    }
+}
+
+.overlay{
+    position:absolute;
+    inset:0;
+
+    background:
+        radial-gradient(
+            circle at center,
+            rgba(0,0,0,.10),
+            rgba(0,0,0,.55)
+        );
+
+    z-index:1;
+}
+
+.nav{
+    position:absolute;
+    top:40px;
+    left:50px;
+
+    z-index:10;
+
+    font-size:24px;
+    font-weight:800;
+    letter-spacing:-0.04em;
+}
+
+.content{
+    position:relative;
+    z-index:10;
+
+    height:100%;
+
+    max-width:1400px;
+
+    margin:auto;
+
+    display:flex;
+    flex-direction:column;
+    justify-content:center;
+
+    padding:0 8vw;
+}
+
+.eyebrow{
+    color:var(--accent);
+
+    font-size:14px;
+    font-weight:600;
+
+    letter-spacing:.18em;
+    text-transform:uppercase;
+
+    margin-bottom:24px;
+}
+
+h1{
+    max-width:900px;
+
+    font-size:clamp(4rem,8vw,8rem);
+
+    line-height:.92;
+    letter-spacing:-0.08em;
+
+    font-weight:800;
+}
+
+.highlight{
+    color:var(--accent);
+}
+
+.subtitle{
+    margin-top:32px;
+
+    max-width:650px;
+
+    font-size:clamp(1rem,1.3vw,1.25rem);
+
+    line-height:1.7;
+
+    color:#d0d0d0;
+}
+
+.cta-row{
+    margin-top:48px;
+
+    display:flex;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.btn-primary{
+    text-decoration:none;
+
+    background:var(--accent);
+    color:#000;
+
+    padding:16px 26px;
+
+    border-radius:999px;
+
+    font-weight:700;
+
+    transition:.3s;
+}
+
+.btn-primary:hover{
+    transform:translateY(-2px);
+}
+
+.btn-secondary{
+    text-decoration:none;
+
+    color:white;
+
+    padding:16px 26px;
+
+    border-radius:999px;
+
+    border:1px solid rgba(255,255,255,.15);
+
+    backdrop-filter:blur(10px);
+}
+
+.scroll-indicator{
+    position:absolute;
+
+    bottom:40px;
+    left:50%;
+
+    transform:translateX(-50%);
+
+    z-index:10;
+
+    color:#9f9f9f;
+
+    font-size:12px;
+
+    letter-spacing:.25em;
+    text-transform:uppercase;
+
+    animation:float 2s ease-in-out infinite;
+}
+
+@keyframes float{
+
+    0%{
+        transform:translateX(-50%) translateY(0);
+    }
+
+    50%{
+        transform:translateX(-50%) translateY(8px);
+    }
+
+    100%{
+        transform:translateX(-50%) translateY(0);
+    }
+
+}
+
+@media(max-width:768px){
+
+    .nav{
+        left:24px;
+        top:24px;
+    }
+
+    .content{
+        padding:0 24px;
+    }
+
+    .subtitle{
+        max-width:100%;
+    }
+
+}
+
+</style>
+</head>
+<body>
+
+<section class="hero">
+
+    <video
+        autoplay
+        muted
+        loop
+        playsinline
+    >
+        <source src="video.mp4" type="video/mp4">
+    </video>
+
+    <div class="overlay"></div>
+
+    <div class="nav">
+        GOLZIO
+    </div>
+
+    <div class="content">
+
+        <div class="eyebrow">
+            VOLVEMOS PRONTO
+        </div>
+
+        <h1>
+            Estamos tomando
+            <span class="highlight">forma.</span>
+        </h1>
+
+        <p class="subtitle">
+            Estamos actualizando Golzio.
+            <br><br>
+            Estrategia + implementación para negocios de servicios.
+        </p>
+
+    </div>
+
+</section>
+
+</body>
+</html>
