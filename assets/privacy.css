@@ -1,0 +1,19 @@
+.privacy-links{display:flex;flex-wrap:wrap;justify-content:center;gap:16px;padding:24px;color:inherit;font:inherit;}
+.privacy-links button{font:inherit;background:none;border:0;text-decoration:underline;color:inherit;cursor:pointer;}
+.cookie-banner{position:fixed;z-index:200;left:16px;bottom:16px;width:min(560px,calc(100% - 32px));max-height:calc(100dvh - 32px);overflow:auto;box-sizing:border-box;padding:24px;background:#fff;color:#141a24;border:1px solid #ccd3df;border-radius:16px;box-shadow:0 12px 50px #141a2433;font:16px/1.5 Arial,sans-serif;}
+.cookie-banner[hidden]{display:none;}.cookie-banner h2{font:700 22px/1.2 Arial,sans-serif;margin:0 0 12px;}.cookie-banner p{font:16px/1.5 Arial,sans-serif;margin:0 0 16px;}.cookie-banner a{color:#294879;text-decoration:underline;}
+.cookie-actions{display:flex;flex-wrap:wrap;gap:10px;}.cookie-actions button{flex:1;min-width:130px;padding:12px;border:1px solid #294879;border-radius:8px;background:#294879;color:#fff;font:600 15px Arial,sans-serif;cursor:pointer;}.cookie-actions button:focus-visible,.cookie-banner input:focus-visible{outline:3px solid #278ba5;outline-offset:3px;}
+.cookie-options{display:grid;gap:12px;padding:12px 0 20px;}.cookie-options[hidden]{display:none;}.cookie-options label{display:flex;align-items:flex-start;gap:10px;font:16px/1.4 Arial,sans-serif;}.cookie-options input{width:20px;height:20px;flex:none;accent-color:#294879;}
+body.cookie-open .wa-float{bottom:calc(var(--cookie-height,290px) + 28px);}
+@media(min-width:601px){.cookie-banner{left:auto;right:16px;}}
+@media(max-width:600px){
+ .cookie-banner{left:10px;bottom:10px;width:calc(100% - 20px);padding:14px;border-radius:12px;}
+ .cookie-banner h2{font-size:17px;margin-bottom:6px;}
+ .cookie-banner p{font-size:13px;line-height:1.4;margin-bottom:10px;}
+ .cookie-actions{gap:6px;}
+ .cookie-actions button{min-width:0;min-height:44px;padding:8px 5px;font-size:12px;line-height:1.2;}
+ .cookie-actions button[data-choice="save"]{flex-basis:100%;}
+ .cookie-options{gap:10px;padding:8px 0 14px;}
+ .cookie-options label{font-size:14px;}
+ body.cookie-open .wa-float{bottom:calc(var(--cookie-height,180px) + 22px);}
+}

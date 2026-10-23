@@ -1,0 +1,3 @@
+User-agent: *
+Allow: /
+Sitemap: https://golzio.cl/sitemap.xml

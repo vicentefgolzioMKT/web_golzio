@@ -1,6 +1,1 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="7" fill="#050505"/>
-  <text x="16" y="26" text-anchor="middle"
-    font-family="'Bebas Neue', 'Arial Black', sans-serif"
-    font-size="26" fill="#e8ff00">G</text>
-</svg>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64"><rect width="64" height="64" rx="14" fill="#141A24"/><text x="32" y="47" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="43" fill="#F6F4EE">G</text></svg>
